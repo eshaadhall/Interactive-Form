@@ -56,15 +56,12 @@ design.addEventListener('click', function(e){
         for(let i=0; i<color.length; i++){
           if(!color[i].textContent.includes('JS Puns')){
              color[i].style.display = "none";
-            // console.log(color[i]);
-
           }
         }
      } else if(e.target.value === 'heart js') {
           for(let i=0; i<color.length; i++){
             if(color[i].textContent.includes('JS Puns')){
                color[i].style.display = "none";
-        //console.log(e.target.value);
       }
     }
   }
@@ -81,7 +78,6 @@ activities.addEventListener('change', function(e){
     // if checkbox is checked.
 var checkbox = e.target.parentElement;
 var programName = checkbox.textContent; // name of the activity selected.
-// var cost = programName.substring(programName.lastIndexOf(',')+1);
 var name = programName.substring(programName.lastIndexOf(','), 0);
 // day and time of the activity selected.
 var day = name.substring(name.indexOf('—')+1);
@@ -174,7 +170,12 @@ register.addEventListener('click', function(e){
     userName.previousElementSibling.textContent = "Name:";
     userName.previousElementSibling.style.color = 'black';
   }
-  if(!emailExp.test(email.value.toLowerCase()) || email.value === ''){
+  if(email.value === ''){
+    e.preventDefault()
+  email.className = "invalid";
+  email.previousElementSibling.textContent = "Email: Enter an email address";
+  email.previousElementSibling.style.color = "red";
+  } else if(!emailExp.test(email.value.toLowerCase())){
        e.preventDefault()
      email.className = "invalid";
      email.previousElementSibling.textContent = "Email: Please enter a valid email address";
@@ -249,7 +250,12 @@ var form = document.querySelectorAll('form')[0];
 form.addEventListener("keyup", function(e){
 // Real-time Error Messages for email field
 if(e.target === email) {
-  if(!emailExp.test(email.value.toLowerCase()) || email.value === ''){
+  if(email.value === ''){
+    e.preventDefault()
+  email.className = "invalid";
+  email.previousElementSibling.textContent = "Email: Enter an email address";
+  email.previousElementSibling.style.color = "red";
+} else if(!emailExp.test(email.value.toLowerCase())){
        e.preventDefault()
      email.className = "invalid";
      email.previousElementSibling.textContent = "Email: Please enter a valid email address";

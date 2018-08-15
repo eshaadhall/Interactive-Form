@@ -13,6 +13,7 @@ In this project I have used JavaScript to enhance an interactive registration fo
   
   2. Conditional Error Message: Some of the form validation have error messages so that more information is provided depending on the error. For example:
     
+	Error Message when email field is blank : "Email: Enter an email address"
 	Error Message when entered an invalid email : "Email: Please enter a valid email address"
     Error Message when Card Number field is blank : "Card Number: Enter a card number"
     Error Message when Card Number field has entered characters (like abcd#$@!) instead of digits:  "Card Number: Enter only Digits"
@@ -24,6 +25,7 @@ In this project I have used JavaScript to enhance an interactive registration fo
   3. Real-time Error Messages: For some of the validation text input fields we have real-time error messages. So, rather than providing an error message on submit, the form checks for errors and displays messages as the user begins typing inside a text field. 
   For example, if the user enters an invalid email address, the error appears as the user begins to type, and disappears as soon as the user has entered a complete and correctly formatted email address.
     
+	Error Message when email field is blank : "Email: Enter an email address"
 	Error Message when entered an invalid email : "Email: Please enter a valid email address"
     Error Message when Card Number field is blank : "Card Number: Enter a card number"
     Error Message when Card Number field has entered characters (like abcd#$@!) instead of digits:  "Card Number: Enter only Digits"
